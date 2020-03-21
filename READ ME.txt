@@ -1,0 +1,11 @@
+Project Overview:
+
+In this project, Peer-to-Peer concept has been implemented to allow is to turn the single player game , Flappy Bird , into a multi-player game. The concept of Peer-to-Peer along with broadcasting enabled us to allow all peers ( clients ) to discover other peers and connect to them.
+
+Our Strategy:
+To begin with, we have implemented threads into our code, precisely 4 threads.
+• A thread for UDP
+• A thread for Client TCP
+• A thread for Updating Score
+• A thread for Scoreboard
+The main concept used was peer discovery in which the clients broadcast their port on a specific UDP Port , priory defined, to all other clients. Every other client is able to get the other client’s port and connect to them. Each client establishes a reliable TCP connection through which it sends and receives data, which in this case is the score.
